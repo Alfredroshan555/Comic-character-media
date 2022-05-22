@@ -36,10 +36,18 @@ export default {
   },
   mounted() {
     this.getAllPosts();
+    t;
   },
   methods: {
     async getAllPosts() {
-      this.posts = await API.getAllPosts();
+      alert("Sd");
+      this.posts = await API.getAllPosts()
+        .then((res) => {
+          alert("res:", res);
+        })
+        .catch((err) => {
+          alert(err);
+        });
       console.log("posts = ", this.posts);
     },
   },

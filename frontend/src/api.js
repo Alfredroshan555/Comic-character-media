@@ -1,10 +1,16 @@
   import axios from 'axios'
-  const url = 'http://localhost:5000/posts'
+  import '@capacitor-community/http';
+  import { Http } from '@capacitor-community/http';
+
+  //   const url = 'http://localhost:5000/posts'
 
   export default class API {
       //   get all posts from db
       static async getAllPosts() {
-              const res = await axios.get(url)
+              const res = await Http.request({
+                  method: 'GET',
+                  url: 'http://localhost:5000/posts'
+              })
               return res.data
           }
           // get post by id

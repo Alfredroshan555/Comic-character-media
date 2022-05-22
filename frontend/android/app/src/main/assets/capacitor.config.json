@@ -1,0 +1,10 @@
+{
+	"appId": "com.comic.app",
+	"appName": "comic-characters-media",
+	"webDir": "dist",
+	"bundledWebRuntime": false,
+	"server": {
+		"url": "http://192.168.1.36:8080",
+		"cleartext": true
+	}
+}
